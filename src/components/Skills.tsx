@@ -80,7 +80,7 @@ const Skills = () => {
           {skillCategories.map((category, index) => (
             <Card 
               key={category.title} 
-              className="bg-card/50 backdrop-blur-sm border-primary/20 hover:shadow-primary transition-all duration-300 animate-scale-in"
+              className="bg-white/10 backdrop-blur-md border-primary/20 hover:shadow-primary transition-all duration-300 animate-scale-in"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <CardHeader>
@@ -92,20 +92,10 @@ const Skills = () => {
                 </CardTitle>
               </CardHeader>
               <CardContent>
-                <div className="space-y-4">
+                <div className="grid grid-cols-2 gap-3">
                   {category.skills.map((skill) => (
-                    <div key={skill.name} className="space-y-2">
-                      <div className="flex justify-between items-center">
-                        <span className="font-medium">{skill.name}</span>
-                        <span className="text-sm text-muted-foreground">{skill.level}%</span>
-                      </div>
-                      <Progress 
-                        value={skill.level} 
-                        className="h-2"
-                        style={{
-                          background: 'hsl(var(--muted))'
-                        }}
-                      />
+                    <div key={skill.name} className="bg-primary/10 rounded-lg p-3 text-center border border-primary/20 backdrop-blur-sm">
+                      <span className="font-medium text-sm">{skill.name}</span>
                     </div>
                   ))}
                 </div>
@@ -116,7 +106,7 @@ const Skills = () => {
 
         {/* Certifications */}
         <div className="animate-fade-in">
-          <Card className="bg-gradient-surface border-primary/20">
+          <Card className="bg-white/10 backdrop-blur-md border-primary/20">
             <CardHeader>
               <CardTitle className="text-center text-2xl">Certifications & Achievements</CardTitle>
             </CardHeader>
@@ -126,7 +116,7 @@ const Skills = () => {
                   <Badge 
                     key={index} 
                     variant="secondary" 
-                    className="bg-primary/10 text-primary border-primary/20 px-4 py-2 text-sm hover:bg-primary/20 transition-colors duration-200"
+                    className="bg-primary/10 backdrop-blur-sm text-primary border-primary/20 px-4 py-2 text-sm hover:bg-primary/20 transition-colors duration-200"
                   >
                     {cert}
                   </Badge>
@@ -146,7 +136,7 @@ const Skills = () => {
             ].map((tech, index) => (
               <div 
                 key={tech}
-                className="bg-surface-variant rounded-lg p-4 text-center hover:bg-primary/10 hover:shadow-glow transition-all duration-300 animate-scale-in"
+                className="bg-white/10 backdrop-blur-sm border border-primary/20 rounded-lg p-4 text-center hover:bg-primary/10 hover:shadow-glow transition-all duration-300 animate-scale-in"
                 style={{ animationDelay: `${index * 0.05}s` }}
               >
                 <span className="font-medium text-sm">{tech}</span>
