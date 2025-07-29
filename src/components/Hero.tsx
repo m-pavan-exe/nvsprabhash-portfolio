@@ -12,18 +12,17 @@ const Hero = () => {
 
   return (
     <section className="min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-hero">
-      {/* Animated Background Elements */}
+      {/* Minimal Professional Background Animation */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        {/* Floating geometric shapes */}
-        <div className="absolute top-20 left-10 w-20 h-20 border border-primary/20 rounded-lg animate-float" style={{ animationDelay: '0s' }}></div>
-        <div className="absolute top-40 right-20 w-16 h-16 bg-primary/10 rounded-full animate-float" style={{ animationDelay: '2s' }}></div>
-        <div className="absolute bottom-40 left-20 w-12 h-12 border border-primary/30 rotate-45 animate-float" style={{ animationDelay: '4s' }}></div>
-        <div className="absolute bottom-20 right-10 w-24 h-24 border border-primary/15 rounded-full animate-float" style={{ animationDelay: '1s' }}></div>
+        {/* Subtle gradient orbs */}
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-radial from-primary/5 to-transparent rounded-full animate-subtle-pulse" style={{ animationDelay: '0s' }}></div>
+        <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-gradient-radial from-primary-glow/8 to-transparent rounded-full animate-subtle-pulse" style={{ animationDelay: '4s' }}></div>
+        <div className="absolute top-1/2 right-1/3 w-64 h-64 bg-gradient-radial from-accent/6 to-transparent rounded-full animate-subtle-pulse" style={{ animationDelay: '2s' }}></div>
         
-        {/* AI/Tech floating elements */}
-        <div className="absolute top-60 left-1/4 w-8 h-8 bg-primary-glow/20 rounded-sm animate-float" style={{ animationDelay: '3s' }}></div>
-        <div className="absolute top-32 right-1/3 w-6 h-6 border border-primary-glow/30 animate-float" style={{ animationDelay: '5s' }}></div>
-        <div className="absolute bottom-60 right-1/4 w-10 h-10 bg-gradient-primary opacity-20 rounded-lg animate-float" style={{ animationDelay: '1.5s' }}></div>
+        {/* Minimal line elements */}
+        <div className="absolute top-20 left-20 w-px h-32 bg-gradient-to-b from-primary/20 to-transparent animate-fade-in" style={{ animationDelay: '1s' }}></div>
+        <div className="absolute bottom-20 right-20 w-24 h-px bg-gradient-to-r from-primary/20 to-transparent animate-fade-in" style={{ animationDelay: '2s' }}></div>
+        <div className="absolute top-1/3 right-12 w-px h-24 bg-gradient-to-b from-primary-glow/20 to-transparent animate-fade-in" style={{ animationDelay: '3s' }}></div>
       </div>
 
       <div className="container mx-auto px-4 py-20 relative z-10">
@@ -34,7 +33,7 @@ const Hero = () => {
               <h2 className="text-lg md:text-xl text-primary font-medium mb-2 animate-slide-in-right" style={{ animationDelay: '0.2s' }}>
                 Hello, I'm
               </h2>
-              <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-4 bg-gradient-primary bg-clip-text text-transparent animate-scale-in" style={{ animationDelay: '0.4s' }}>
+              <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-4 bg-gradient-to-r from-primary via-primary-glow to-accent bg-[length:200%_auto] bg-clip-text text-transparent animate-gradient-move animate-scale-in" style={{ animationDelay: '0.4s' }}>
                 NVS Prabhash
               </h1>
               <h3 className="text-xl md:text-2xl lg:text-3xl text-muted-foreground mb-6 animate-fade-in" style={{ animationDelay: '0.6s' }}>

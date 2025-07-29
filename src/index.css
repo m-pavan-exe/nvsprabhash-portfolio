@@ -8,32 +8,32 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 195 70% 97%;
-    --foreground: 195 50% 20%;
+    --background: 200 35% 93%;
+    --foreground: 200 45% 15%;
 
-    --card: 195 70% 94%;
-    --card-foreground: 195 50% 20%;
+    --card: 200 30% 89%;
+    --card-foreground: 200 45% 15%;
 
-    --popover: 195 70% 94%;
-    --popover-foreground: 195 50% 20%;
+    --popover: 200 30% 89%;
+    --popover-foreground: 200 45% 15%;
 
-    --primary: 195 80% 49%;
+    --primary: 200 75% 35%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 195 70% 89%;
-    --secondary-foreground: 195 50% 20%;
+    --secondary: 200 25% 82%;
+    --secondary-foreground: 200 45% 15%;
 
-    --muted: 195 70% 89%;
-    --muted-foreground: 195 30% 50%;
+    --muted: 200 25% 82%;
+    --muted-foreground: 200 20% 45%;
 
-    --accent: 195 70% 64%;
+    --accent: 200 65% 45%;
     --accent-foreground: 0 0% 100%;
 
-    /* Custom portfolio colors */
-    --primary-glow: 195 70% 78%;
-    --primary-dark: 195 80% 40%;
-    --surface: 195 70% 94%;
-    --surface-variant: 195 70% 89%;
+    /* Custom portfolio colors - darker blue shades */
+    --primary-glow: 200 60% 65%;
+    --primary-dark: 200 80% 25%;
+    --surface: 200 30% 89%;
+    --surface-variant: 200 25% 82%;
     
     /* Gradients */
     --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-glow)));
@@ -76,32 +76,32 @@ All colors MUST be HSL.
   }
 
   .dark {
-    --background: 195 50% 10%;
-    --foreground: 195 70% 95%;
+    --background: 200 40% 8%;
+    --foreground: 200 60% 92%;
 
-    --card: 195 50% 15%;
-    --card-foreground: 195 70% 95%;
+    --card: 200 40% 12%;
+    --card-foreground: 200 60% 92%;
 
-    --popover: 195 50% 15%;
-    --popover-foreground: 195 70% 95%;
+    --popover: 200 40% 12%;
+    --popover-foreground: 200 60% 92%;
 
-    --primary: 195 70% 64%;
-    --primary-foreground: 195 50% 10%;
+    --primary: 200 65% 55%;
+    --primary-foreground: 200 40% 8%;
 
-    --secondary: 195 50% 20%;
-    --secondary-foreground: 195 70% 95%;
+    --secondary: 200 40% 18%;
+    --secondary-foreground: 200 60% 92%;
 
-    --muted: 195 50% 20%;
-    --muted-foreground: 195 30% 70%;
+    --muted: 200 40% 18%;
+    --muted-foreground: 200 25% 65%;
 
-    --accent: 195 70% 64%;
-    --accent-foreground: 195 50% 10%;
+    --accent: 200 65% 55%;
+    --accent-foreground: 200 40% 8%;
 
-    /* Dark mode custom colors */
-    --primary-glow: 195 70% 78%;
-    --primary-dark: 195 80% 49%;
-    --surface: 195 50% 15%;
-    --surface-variant: 195 50% 20%;
+    /* Dark mode custom colors - darker blues */
+    --primary-glow: 200 60% 70%;
+    --primary-dark: 200 75% 45%;
+    --surface: 200 40% 12%;
+    --surface-variant: 200 40% 18%;
 
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 40% 98%;
