@@ -12,17 +12,17 @@ const Hero = () => {
 
   return (
     <section className="min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-hero">
-      {/* Minimal Professional Background Animation with Pink Accents */}
+      {/* Minimal Professional Background Animation */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        {/* Subtle gradient orbs with pink accents */}
+        {/* Subtle gradient orbs */}
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-radial from-primary/5 to-transparent rounded-full animate-subtle-pulse" style={{ animationDelay: '0s' }}></div>
-        <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-gradient-radial from-pink/6 to-transparent rounded-full animate-subtle-pulse" style={{ animationDelay: '4s' }}></div>
-        <div className="absolute top-1/2 right-1/3 w-64 h-64 bg-gradient-radial from-pink-light/8 to-transparent rounded-full animate-subtle-pulse" style={{ animationDelay: '2s' }}></div>
+        <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-gradient-radial from-primary-glow/8 to-transparent rounded-full animate-subtle-pulse" style={{ animationDelay: '4s' }}></div>
+        <div className="absolute top-1/2 right-1/3 w-64 h-64 bg-gradient-radial from-accent/6 to-transparent rounded-full animate-subtle-pulse" style={{ animationDelay: '2s' }}></div>
         
-        {/* Minimal line elements with pink accents */}
+        {/* Minimal line elements */}
         <div className="absolute top-20 left-20 w-px h-32 bg-gradient-to-b from-primary/20 to-transparent animate-fade-in" style={{ animationDelay: '1s' }}></div>
-        <div className="absolute bottom-20 right-20 w-24 h-px bg-gradient-to-r from-pink/20 to-transparent animate-fade-in" style={{ animationDelay: '2s' }}></div>
-        <div className="absolute top-1/3 right-12 w-px h-24 bg-gradient-to-b from-pink-light/20 to-transparent animate-fade-in" style={{ animationDelay: '3s' }}></div>
+        <div className="absolute bottom-20 right-20 w-24 h-px bg-gradient-to-r from-primary/20 to-transparent animate-fade-in" style={{ animationDelay: '2s' }}></div>
+        <div className="absolute top-1/3 right-12 w-px h-24 bg-gradient-to-b from-primary-glow/20 to-transparent animate-fade-in" style={{ animationDelay: '3s' }}></div>
       </div>
 
       <div className="container mx-auto px-4 py-20 relative z-10">
@@ -33,7 +33,7 @@ const Hero = () => {
               <h2 className="text-lg md:text-xl text-primary font-medium mb-2 animate-slide-in-right" style={{ animationDelay: '0.2s' }}>
                 Hello, I'm
               </h2>
-              <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-4 bg-gradient-to-r from-primary via-pink-light to-accent bg-[length:200%_auto] bg-clip-text text-transparent animate-gradient-move animate-scale-in" style={{ animationDelay: '0.4s' }}>
+              <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-4 bg-gradient-to-r from-primary via-primary-glow to-accent bg-[length:200%_auto] bg-clip-text text-transparent animate-gradient-move animate-scale-in" style={{ animationDelay: '0.4s' }}>
                 NVS Prabhash
               </h1>
               <h3 className="text-xl md:text-2xl lg:text-3xl text-muted-foreground mb-6 animate-fade-in" style={{ animationDelay: '0.6s' }}>
@@ -50,7 +50,7 @@ const Hero = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start animate-fade-in" style={{ animationDelay: '1s' }}>
               <Button 
                 size="lg" 
-                className="bg-gradient-accent hover:shadow-pink transition-all duration-300 transform hover:scale-105 text-white"
+                className="bg-gradient-primary hover:shadow-glow transition-all duration-300 transform hover:scale-105"
                 onClick={() => scrollToSection('#projects')}
               >
                 <Eye className="mr-2 h-5 w-5" />
@@ -80,10 +80,10 @@ const Hero = () => {
                   className="w-full h-full object-cover"
                 />
               </div>
-              {/* Decorative elements around photo with pink accents */}
-              <div className="absolute -top-4 -right-4 w-8 h-8 bg-pink rounded-full animate-float shadow-pink" style={{ animationDelay: '2s' }}></div>
-              <div className="absolute -bottom-4 -left-4 w-6 h-6 border-2 border-pink-light rounded-full animate-float" style={{ animationDelay: '4s' }}></div>
-              <div className="absolute top-1/2 -left-8 w-4 h-4 bg-pink-light/70 rounded-sm animate-float" style={{ animationDelay: '1s' }}></div>
+              {/* Decorative elements around photo */}
+              <div className="absolute -top-4 -right-4 w-8 h-8 bg-primary rounded-full animate-float" style={{ animationDelay: '2s' }}></div>
+              <div className="absolute -bottom-4 -left-4 w-6 h-6 border-2 border-primary-glow rounded-full animate-float" style={{ animationDelay: '4s' }}></div>
+              <div className="absolute top-1/2 -left-8 w-4 h-4 bg-primary-glow/50 rounded-sm animate-float" style={{ animationDelay: '1s' }}></div>
             </div>
           </div>
         </div>
