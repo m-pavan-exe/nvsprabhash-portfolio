@@ -14,10 +14,10 @@ const Hero = () => {
     <section className="min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-hero">
       {/* Minimal Professional Background Animation */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        {/* Subtle gradient orbs */}
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-radial from-primary/5 to-transparent rounded-full animate-subtle-pulse" style={{ animationDelay: '0s' }}></div>
-        <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-gradient-radial from-primary-glow/8 to-transparent rounded-full animate-subtle-pulse" style={{ animationDelay: '4s' }}></div>
-        <div className="absolute top-1/2 right-1/3 w-64 h-64 bg-gradient-radial from-accent/6 to-transparent rounded-full animate-subtle-pulse" style={{ animationDelay: '2s' }}></div>
+        {/* Subtle gradient orbs with pink accents */}
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-radial from-pink-soft/8 to-transparent rounded-full animate-subtle-pulse" style={{ animationDelay: '0s' }}></div>
+        <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-gradient-radial from-pink-glow/6 to-transparent rounded-full animate-subtle-pulse" style={{ animationDelay: '4s' }}></div>
+        <div className="absolute top-1/2 right-1/3 w-64 h-64 bg-gradient-radial from-pink-accent/5 to-transparent rounded-full animate-subtle-pulse" style={{ animationDelay: '2s' }}></div>
         
         {/* Minimal line elements */}
         <div className="absolute top-20 left-20 w-px h-32 bg-gradient-to-b from-primary/20 to-transparent animate-fade-in" style={{ animationDelay: '1s' }}></div>

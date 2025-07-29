@@ -58,6 +58,11 @@ export default {
 					DEFAULT: 'hsl(var(--surface))',
 					variant: 'hsl(var(--surface-variant))'
 				},
+				pink: {
+					soft: 'hsl(var(--pink-soft))',
+					glow: 'hsl(var(--pink-glow))',
+					accent: 'hsl(var(--pink-accent))'
+				},
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
 					foreground: 'hsl(var(--sidebar-foreground))',
