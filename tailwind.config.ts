@@ -58,6 +58,11 @@ export default {
 					DEFAULT: 'hsl(var(--surface))',
 					variant: 'hsl(var(--surface-variant))'
 				},
+				pink: {
+					DEFAULT: 'hsl(var(--pink))',
+					light: 'hsl(var(--pink-light))',
+					dark: 'hsl(var(--pink-dark))'
+				},
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
 					foreground: 'hsl(var(--sidebar-foreground))',
@@ -72,12 +77,14 @@ export default {
 			boxShadow: {
 				'primary': 'var(--shadow-primary)',
 				'card': 'var(--shadow-card)',
-				'glow': 'var(--shadow-glow)'
+				'glow': 'var(--shadow-glow)',
+				'pink': 'var(--shadow-pink)'
 			},
 			backgroundImage: {
 				'gradient-primary': 'var(--gradient-primary)',
 				'gradient-surface': 'var(--gradient-surface)',
-				'gradient-hero': 'var(--gradient-hero)'
+				'gradient-hero': 'var(--gradient-hero)',
+				'gradient-accent': 'var(--gradient-accent)'
 			},
 			transitionTimingFunction: {
 				'smooth': 'cubic-bezier(0.4, 0, 0.2, 1)',
