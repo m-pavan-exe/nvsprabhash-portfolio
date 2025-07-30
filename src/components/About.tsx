@@ -13,16 +13,14 @@ const About = () => {
   ];
 
   return (
-    <section id="about" className="py-20 bg-gradient-surface">
+    <section id="about" className="py-20 bg-background">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16 animate-fade-in">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-primary bg-clip-text text-transparent">
-            About Me
-          </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Passionate about leveraging artificial intelligence to solve real-world problems
-          </p>
-        </div>
+        <div className="max-w-6xl mx-auto">
+          <div className="mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+              <span className="text-primary font-mono">01.</span> About Me
+            </h2>
+          </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left side - Personal info cards */}
@@ -116,6 +114,7 @@ const About = () => {
               </div>
             </div>
           </div>
+        </div>
         </div>
       </div>
     </section>

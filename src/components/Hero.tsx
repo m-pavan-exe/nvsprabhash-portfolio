@@ -1,5 +1,5 @@
 import { Button } from '@/components/ui/button';
-import { ArrowDown, Download, Eye } from 'lucide-react';
+import { ArrowDown, ChevronDown } from 'lucide-react';
 
 const Hero = () => {
   const scrollToSection = (href: string) => {
@@ -10,12 +10,12 @@ const Hero = () => {
   };
 
   return (
-    <section className="min-h-screen flex items-center justify-center relative overflow-hidden bg-navy-dark">
-      {/* Large outline text background like "SEOHO" */}
+    <section id="hero" className="min-h-screen flex items-center justify-center relative overflow-hidden bg-background">
+      {/* Large outline text background */}
       <div className="absolute inset-0 flex items-center justify-center pointer-events-none select-none">
-        <h1 className="text-[20vw] font-black text-outline-text opacity-10 leading-none tracking-wider"
+        <h1 className="text-[15vw] lg:text-[12vw] font-black opacity-5 leading-none tracking-wider text-foreground/10"
             style={{ 
-              WebkitTextStroke: '2px hsl(var(--outline-stroke))',
+              WebkitTextStroke: '1px hsl(var(--foreground) / 0.1)',
               color: 'transparent'
             }}>
           PRABHASH
@@ -23,42 +23,42 @@ const Hero = () => {
       </div>
 
       <div className="container mx-auto px-4 py-20 relative z-10">
-        <div className="flex flex-col lg:flex-row items-center justify-center gap-16">
-          {/* Left side - Text content */}
-          <div className="flex-1 text-left animate-fade-in order-2 lg:order-1">
-            <div className="mb-8">
-              <h2 className="text-2xl md:text-3xl text-foreground font-medium mb-4 animate-slide-in-right" style={{ animationDelay: '0.2s' }}>
-                Hello 👋,<br />
-                I'm Prabhash
-              </h2>
+        <div className="max-w-4xl mx-auto">
+          {/* Hero Content */}
+          <div className="text-left space-y-6 animate-fade-in">
+            {/* Greeting */}
+            <p className="text-lg md:text-xl text-primary font-mono">
+              Hello there, I'm
+            </p>
+            
+            {/* Name */}
+            <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-foreground leading-tight">
+              Prabhash.
+            </h1>
+            
+            {/* Tagline */}
+            <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold text-secondary leading-tight">
+              I build things for the web.
+            </h2>
+            
+            {/* Bio */}
+            <p className="text-lg text-secondary max-w-2xl leading-relaxed mt-8">
+              I'm a passionate full-stack developer specializing in building exceptional digital experiences. 
+              Currently focused on creating innovative web applications with modern technologies and clean, 
+              user-centered design.
+            </p>
+            
+            {/* CTA Button */}
+            <div className="mt-12">
+              <Button 
+                onClick={() => scrollToSection('#projects')}
+                variant="outline"
+                size="lg"
+                className="border-primary text-primary hover:bg-primary hover:text-background transition-all duration-300 px-8 py-6 text-lg font-mono"
+              >
+                View My Work
+              </Button>
             </div>
-          </div>
-
-          {/* Center - Profile photo with circular sky background */}
-          <div className="flex justify-center animate-scale-in order-1 lg:order-2" style={{ animationDelay: '0.4s' }}>
-            <div className="relative">
-              {/* Sky background circle */}
-              <div className="w-80 h-80 md:w-96 md:h-96 rounded-full bg-gradient-sky relative overflow-hidden shadow-glow">
-                {/* Cloud elements */}
-                <div className="absolute top-1/4 left-1/4 w-20 h-12 bg-white rounded-full opacity-80"></div>
-                <div className="absolute top-1/4 left-1/3 w-16 h-10 bg-white rounded-full opacity-60"></div>
-                <div className="absolute bottom-1/3 right-1/4 w-24 h-14 bg-white rounded-full opacity-70"></div>
-                <div className="absolute bottom-1/4 right-1/3 w-18 h-12 bg-white rounded-full opacity-50"></div>
-                
-                {/* User's profile image */}
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <img 
-                    src="/lovable-uploads/57ea3601-e768-4c5f-a872-a04b0581b8ad.png" 
-                    alt="Profile Photo" 
-                    className="w-full h-full object-cover rounded-full"
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Right side - Empty for clean layout */}
-          <div className="flex-1 order-3 lg:order-3">
           </div>
         </div>
 
@@ -66,9 +66,9 @@ const Hero = () => {
         <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
           <button 
             onClick={() => scrollToSection('#about')}
-            className="flex flex-col items-center text-muted-foreground hover:text-navy-accent transition-colors duration-300"
+            className="flex flex-col items-center text-secondary hover:text-primary transition-colors duration-300"
           >
-            <ArrowDown className="h-6 w-6" />
+            <ChevronDown className="h-6 w-6" />
           </button>
         </div>
       </div>

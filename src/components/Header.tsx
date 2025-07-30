@@ -15,10 +15,10 @@ const Header = () => {
   }, []);
 
   const navItems = [
-    { label: 'Home', href: '#hero' },
-    { label: 'Works', href: '#projects' },
-    { label: 'Blog', href: '#blog' },
-    { label: 'About Me', href: '#about' }
+    { label: '01. About', href: '#about' },
+    { label: '02. Experience', href: '#experience' },
+    { label: '03. Work', href: '#projects' },
+    { label: '04. Contact', href: '#contact' }
   ];
 
   const scrollToSection = (href: string) => {
@@ -36,8 +36,8 @@ const Header = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <div className="w-8 h-8 bg-gradient-primary rounded-lg flex items-center justify-center">
-            <div className="w-4 h-4 bg-white rounded-sm transform rotate-45"></div>
+          <div className="text-2xl font-bold text-primary font-mono">
+            P
           </div>
 
           {/* Desktop Navigation */}
@@ -46,7 +46,7 @@ const Header = () => {
               <button
                 key={item.label}
                 onClick={() => scrollToSection(item.href)}
-                className="text-foreground hover:text-primary transition-colors duration-200 relative group"
+                className="text-secondary hover:text-primary transition-colors duration-200 relative group font-mono text-sm"
               >
                 {item.label}
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-300"></span>
@@ -54,13 +54,16 @@ const Header = () => {
             ))}
           </nav>
 
-          {/* Download Button */}
+          {/* Resume Button */}
           <div className="hidden md:flex items-center">
             <Button 
               variant="outline" 
-              className="border-red-500 text-red-500 hover:bg-red-500 hover:text-white transition-all duration-300"
+              className="border-primary text-primary hover:bg-primary hover:text-background transition-all duration-300 font-mono"
+              asChild
             >
-              Download Resume and Portfolio
+              <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">
+                Resume
+              </a>
             </Button>
           </div>
 
@@ -83,7 +86,7 @@ const Header = () => {
                 <button
                   key={item.label}
                   onClick={() => scrollToSection(item.href)}
-                  className="text-left px-4 py-3 text-foreground hover:text-primary hover:bg-surface transition-all duration-200"
+                  className="text-left px-4 py-3 text-secondary hover:text-primary hover:bg-muted transition-all duration-200 font-mono"
                 >
                   {item.label}
                 </button>
