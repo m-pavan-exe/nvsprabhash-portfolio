@@ -54,14 +54,20 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
-				surface: {
-					DEFAULT: 'hsl(var(--surface))',
-					variant: 'hsl(var(--surface-variant))'
+				navy: {
+					dark: 'hsl(var(--navy-dark))',
+					medium: 'hsl(var(--navy-medium))',
+					light: 'hsl(var(--navy-light))',
+					accent: 'hsl(var(--navy-accent))'
 				},
-				pink: {
-					soft: 'hsl(var(--pink-soft))',
-					glow: 'hsl(var(--pink-glow))',
-					accent: 'hsl(var(--pink-accent))'
+				sky: {
+					light: 'hsl(var(--sky-light))',
+					medium: 'hsl(var(--sky-medium))',
+					dark: 'hsl(var(--sky-dark))'
+				},
+				outline: {
+					text: 'hsl(var(--outline-text))',
+					stroke: 'hsl(var(--outline-stroke))'
 				},
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
@@ -77,13 +83,15 @@ export default {
 			boxShadow: {
 				'primary': 'var(--shadow-primary)',
 				'card': 'var(--shadow-card)',
-				'glow': 'var(--shadow-glow)'
+				'glow': 'var(--shadow-glow)',
+				'text': 'var(--shadow-text)'
 			},
 			backgroundImage: {
 				'gradient-primary': 'var(--gradient-primary)',
 				'gradient-surface': 'var(--gradient-surface)',
 				'gradient-hero': 'var(--gradient-hero)',
-				'gradient-page': 'var(--gradient-page)'
+				'gradient-page': 'var(--gradient-page)',
+				'gradient-sky': 'var(--gradient-sky)'
 			},
 			transitionTimingFunction: {
 				'smooth': 'cubic-bezier(0.4, 0, 0.2, 1)',

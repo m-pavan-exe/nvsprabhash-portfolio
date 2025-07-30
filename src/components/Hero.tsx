@@ -1,6 +1,5 @@
 import { Button } from '@/components/ui/button';
 import { ArrowDown, Download, Eye } from 'lucide-react';
-import profilePhoto from '@/assets/profile-photo.jpg';
 
 const Hero = () => {
   const scrollToSection = (href: string) => {
@@ -11,79 +10,83 @@ const Hero = () => {
   };
 
   return (
-    <section className="min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-hero">
-      {/* Minimal Professional Background Animation */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        {/* Subtle gradient orbs with pink accents */}
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-radial from-pink-soft/8 to-transparent rounded-full animate-subtle-pulse" style={{ animationDelay: '0s' }}></div>
-        <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-gradient-radial from-pink-glow/6 to-transparent rounded-full animate-subtle-pulse" style={{ animationDelay: '4s' }}></div>
-        <div className="absolute top-1/2 right-1/3 w-64 h-64 bg-gradient-radial from-pink-accent/5 to-transparent rounded-full animate-subtle-pulse" style={{ animationDelay: '2s' }}></div>
-        
-        {/* Minimal line elements */}
-        <div className="absolute top-20 left-20 w-px h-32 bg-gradient-to-b from-primary/20 to-transparent animate-fade-in" style={{ animationDelay: '1s' }}></div>
-        <div className="absolute bottom-20 right-20 w-24 h-px bg-gradient-to-r from-primary/20 to-transparent animate-fade-in" style={{ animationDelay: '2s' }}></div>
-        <div className="absolute top-1/3 right-12 w-px h-24 bg-gradient-to-b from-primary-glow/20 to-transparent animate-fade-in" style={{ animationDelay: '3s' }}></div>
+    <section className="min-h-screen flex items-center justify-center relative overflow-hidden bg-navy-dark">
+      {/* Large outline text background like "SEOHO" */}
+      <div className="absolute inset-0 flex items-center justify-center pointer-events-none select-none">
+        <h1 className="text-[20vw] font-black text-outline-text opacity-10 leading-none tracking-wider"
+            style={{ 
+              WebkitTextStroke: '2px hsl(var(--outline-stroke))',
+              color: 'transparent'
+            }}>
+          SEOHO
+        </h1>
       </div>
 
       <div className="container mx-auto px-4 py-20 relative z-10">
-        <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
+        <div className="flex flex-col lg:flex-row items-center justify-center gap-16">
           {/* Left side - Text content */}
-          <div className="flex-1 text-center lg:text-left animate-fade-in">
-            <div className="mb-6">
-              <h2 className="text-lg md:text-xl text-primary font-medium mb-2 animate-slide-in-right" style={{ animationDelay: '0.2s' }}>
-                Hello, I'm
+          <div className="flex-1 text-left animate-fade-in order-2 lg:order-1">
+            <div className="mb-8">
+              <h2 className="text-2xl md:text-3xl text-foreground font-medium mb-4 animate-slide-in-right" style={{ animationDelay: '0.2s' }}>
+                你好👋，<br />
+                我是三秋十季
               </h2>
-              <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-4 bg-gradient-to-r from-primary via-primary-glow to-accent bg-[length:200%_auto] bg-clip-text text-transparent animate-gradient-move animate-scale-in" style={{ animationDelay: '0.4s' }}>
-                NVS Prabhash
-              </h1>
-              <h3 className="text-xl md:text-2xl lg:text-3xl text-muted-foreground mb-6 animate-fade-in" style={{ animationDelay: '0.6s' }}>
-                AI/ML Engineer & Software Developer
-              </h3>
-            </div>
-            
-            <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto lg:mx-0 leading-relaxed animate-fade-in" style={{ animationDelay: '0.8s' }}>
-              B.Tech in Computer Science with specialization in AI & Machine Learning. 
-              Passionate about building intelligent systems and innovative solutions 
-              using cutting-edge technologies.
-            </p>
-            
-            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start animate-fade-in" style={{ animationDelay: '1s' }}>
-              <Button 
-                size="lg" 
-                className="bg-gradient-primary hover:shadow-glow transition-all duration-300 transform hover:scale-105"
-                onClick={() => scrollToSection('#projects')}
-              >
-                <Eye className="mr-2 h-5 w-5" />
-                View My Work
-              </Button>
-              <Button 
-                variant="outline" 
-                size="lg"
-                className="border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-all duration-300 transform hover:scale-105"
-                asChild
-              >
-                <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">
-                  <Download className="mr-2 h-5 w-5" />
-                  Download Resume
-                </a>
-              </Button>
+              <p className="text-sm md:text-base text-muted-foreground mb-4 opacity-60 animate-fade-in" style={{ animationDelay: '0.4s' }}>
+                A BRAVE CLIMBER IN THE WORLD OF PRODUCT DESIGN
+              </p>
+              <p className="text-base md:text-lg text-muted-foreground leading-relaxed animate-fade-in" style={{ animationDelay: '0.6s' }}>
+                —个在产品设计届务力攀登的新生
+              </p>
+              <p className="text-sm md:text-base text-muted-foreground leading-relaxed animate-fade-in mt-2" style={{ animationDelay: '0.8s' }}>
+                拥有一颗童无边界的好奇心和一般心无旁骛的探索力
+              </p>
+              <p className="text-xs text-muted-foreground opacity-60 mt-4 animate-fade-in" style={{ animationDelay: '1s' }}>
+                这句话来自草帽Smao
+              </p>
             </div>
           </div>
 
-          {/* Right side - Profile photo */}
-          <div className="flex-1 flex justify-center lg:justify-end animate-scale-in" style={{ animationDelay: '0.6s' }}>
+          {/* Center - Profile photo with circular sky background */}
+          <div className="flex justify-center animate-scale-in order-1 lg:order-2" style={{ animationDelay: '0.4s' }}>
             <div className="relative">
-              <div className="w-80 h-80 md:w-96 md:h-96 rounded-full overflow-hidden shadow-glow border-4 border-primary/20 animate-glow">
-                <img 
-                  src={profilePhoto} 
-                  alt="NVS Prabhash - Profile Photo" 
-                  className="w-full h-full object-cover"
-                />
+              {/* Sky background circle */}
+              <div className="w-80 h-80 md:w-96 md:h-96 rounded-full bg-gradient-sky relative overflow-hidden shadow-glow">
+                {/* Cloud elements */}
+                <div className="absolute top-1/4 left-1/4 w-20 h-12 bg-white rounded-full opacity-80"></div>
+                <div className="absolute top-1/4 left-1/3 w-16 h-10 bg-white rounded-full opacity-60"></div>
+                <div className="absolute bottom-1/3 right-1/4 w-24 h-14 bg-white rounded-full opacity-70"></div>
+                <div className="absolute bottom-1/4 right-1/3 w-18 h-12 bg-white rounded-full opacity-50"></div>
+                
+                {/* User's profile image */}
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <img 
+                    src="/lovable-uploads/57ea3601-e768-4c5f-a872-a04b0581b8ad.png" 
+                    alt="Profile Photo" 
+                    className="w-full h-full object-cover rounded-full"
+                  />
+                </div>
               </div>
-              {/* Decorative elements around photo */}
-              <div className="absolute -top-4 -right-4 w-8 h-8 bg-primary rounded-full animate-float" style={{ animationDelay: '2s' }}></div>
-              <div className="absolute -bottom-4 -left-4 w-6 h-6 border-2 border-primary-glow rounded-full animate-float" style={{ animationDelay: '4s' }}></div>
-              <div className="absolute top-1/2 -left-8 w-4 h-4 bg-primary-glow/50 rounded-sm animate-float" style={{ animationDelay: '1s' }}></div>
+            </div>
+          </div>
+
+          {/* Right side - Additional content or controls */}
+          <div className="flex-1 flex flex-col items-start space-y-4 order-3 lg:order-3">
+            <div className="text-xs text-muted-foreground animate-fade-in" style={{ animationDelay: '1.2s' }}>
+              注：
+            </div>
+            <button className="px-4 py-2 bg-navy-accent text-navy-dark rounded text-sm font-medium animate-fade-in" style={{ animationDelay: '1.4s' }}>
+              分享原因
+            </button>
+            <div className="text-xs text-muted-foreground space-y-2 animate-fade-in" style={{ animationDelay: '1.6s' }}>
+              <p>如果画面有遮挡</p>
+              <p>请按下「F键」全屏获得最佳感受</p>
+              <p>按「Z键」调整适合的视图大小</p>
+              <br />
+              <p>所有需跳转外链的地址都需要再次点击跳</p>
+              <p>转页中间的链接，这是Figma原型的不可避的</p>
+              <p>问题。</p>
+              <br />
+              <p>beta演示版，不代表最终效果。</p>
             </div>
           </div>
         </div>
@@ -92,9 +95,9 @@ const Hero = () => {
         <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
           <button 
             onClick={() => scrollToSection('#about')}
-            className="flex flex-col items-center text-muted-foreground hover:text-primary transition-colors duration-300"
+            className="flex flex-col items-center text-muted-foreground hover:text-navy-accent transition-colors duration-300"
           >
-            <span className="text-sm mb-2">Scroll Down</span>
+            <span className="text-sm mb-2">101%</span>
             <ArrowDown className="h-6 w-6" />
           </button>
         </div>
