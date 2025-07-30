@@ -15,12 +15,10 @@ const Header = () => {
   }, []);
 
   const navItems = [
-    { label: 'About', href: '#about' },
-    { label: 'Skills', href: '#skills' },
-    { label: 'Projects', href: '#projects' },
-    { label: 'Experience', href: '#experience' },
-    { label: 'Education', href: '#education' },
-    { label: 'Contact', href: '#contact' }
+    { label: 'Home', href: '#hero' },
+    { label: 'Works', href: '#projects' },
+    { label: 'Blog', href: '#blog' },
+    { label: 'About Me', href: '#about' }
   ];
 
   const scrollToSection = (href: string) => {
@@ -38,8 +36,8 @@ const Header = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <div className="text-2xl font-bold bg-gradient-primary bg-clip-text text-transparent">
-            NVS PRABHASH
+          <div className="w-8 h-8 bg-gradient-primary rounded-lg flex items-center justify-center">
+            <div className="w-4 h-4 bg-white rounded-sm transform rotate-45"></div>
           </div>
 
           {/* Desktop Navigation */}
@@ -56,37 +54,13 @@ const Header = () => {
             ))}
           </nav>
 
-          {/* Social Links */}
-          <div className="hidden md:flex items-center space-x-4">
-            <Button
-              variant="ghost"
-              size="icon"
-              asChild
-              className="hover:text-primary hover:shadow-glow transition-all duration-300"
+          {/* Download Button */}
+          <div className="hidden md:flex items-center">
+            <Button 
+              variant="outline" 
+              className="border-red-500 text-red-500 hover:bg-red-500 hover:text-white transition-all duration-300"
             >
-              <a href="https://github.com/NVS-PRABHASH" target="_blank" rel="noopener noreferrer">
-                <Github className="h-5 w-5" />
-              </a>
-            </Button>
-            <Button
-              variant="ghost"
-              size="icon"
-              asChild
-              className="hover:text-primary hover:shadow-glow transition-all duration-300"
-            >
-              <a href="https://www.linkedin.com/in/nvs-prabhash" target="_blank" rel="noopener noreferrer">
-                <Linkedin className="h-5 w-5" />
-              </a>
-            </Button>
-            <Button
-              variant="ghost"
-              size="icon"
-              asChild
-              className="hover:text-primary hover:shadow-glow transition-all duration-300"
-            >
-              <a href="mailto:prabhasnvs@gmail.com">
-                <Mail className="h-5 w-5" />
-              </a>
+              Download Resume and Portfolio
             </Button>
           </div>
 
