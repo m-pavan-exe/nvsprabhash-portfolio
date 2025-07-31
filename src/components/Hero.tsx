@@ -26,11 +26,6 @@ const Hero = () => {
       <div className="container mx-auto px-4 py-20 relative z-10">
         <div className="max-w-7xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
-            {/* Profile Image - Center Left */}
-            <div className="flex justify-center lg:justify-start">
-              <ProfileImage />
-            </div>
-            
             {/* Hero Content */}
             <div className="text-left lg:text-left space-y-6 animate-fade-in">
               {/* Greeting */}
@@ -66,6 +61,11 @@ const Hero = () => {
                   View My Work
                 </Button>
               </div>
+            </div>
+            
+            {/* Profile Image - Center Right */}
+            <div className="flex justify-center lg:justify-end">
+              <ProfileImage />
             </div>
           </div>
         </div>
