@@ -1,6 +1,8 @@
 import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
+import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
 import { Menu, X, Github, Linkedin, Mail } from 'lucide-react';
+import profilePhoto from '@/assets/profile-photo.jpg';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -36,9 +38,10 @@ const Header = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <div className="text-2xl font-bold text-primary font-mono">
-            P
-          </div>
+          <Avatar className="h-10 w-10">
+            <AvatarImage src={profilePhoto} alt="Prabhash" />
+            <AvatarFallback className="text-primary font-mono font-bold">P</AvatarFallback>
+          </Avatar>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
