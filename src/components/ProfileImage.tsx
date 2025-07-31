@@ -35,7 +35,7 @@ const ProfileImage = () => {
 
   if (isProcessing) {
     return (
-      <div className="w-80 h-96 bg-muted animate-pulse flex items-center justify-center">
+      <div className="w-80 h-80 rounded-full bg-muted animate-pulse flex items-center justify-center">
         <div className="text-muted-foreground">Processing...</div>
       </div>
     );
@@ -43,7 +43,7 @@ const ProfileImage = () => {
 
   return (
     <div className="relative">
-      <div className="w-80 h-96 overflow-hidden shadow-xl">
+      <div className="w-80 h-80 rounded-full overflow-hidden border-4 border-primary/20 shadow-xl">
         {processedImageUrl && (
           <img
             src={processedImageUrl}
@@ -52,6 +52,9 @@ const ProfileImage = () => {
           />
         )}
       </div>
+      {/* Decorative elements */}
+      <div className="absolute -inset-4 rounded-full border border-primary/10 animate-pulse"></div>
+      <div className="absolute -inset-8 rounded-full border border-primary/5"></div>
     </div>
   );
 };
