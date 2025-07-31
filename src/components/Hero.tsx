@@ -27,7 +27,7 @@ const Hero = () => {
         <div className="max-w-7xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Hero Content */}
-            <div className="text-center lg:text-left space-y-6 animate-fade-in lg:pl-12">
+            <div className="text-center lg:text-left space-y-6 animate-fade-in lg:pl-16">
               {/* Greeting */}
               <p className="text-lg md:text-xl text-primary font-mono">
                 Hello there, I'm
