@@ -48,7 +48,7 @@ const ProfileImage = () => {
           <img
             src={processedImageUrl}
             alt="Prabhash - Full Stack Developer"
-            className="w-full h-full object-cover object-top"
+            className="w-full h-full object-cover object-left-top"
           />
         )}
       </div>
