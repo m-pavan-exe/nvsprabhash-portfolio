@@ -47,7 +47,7 @@ const ProfileImage = () => {
         {processedImageUrl && (
           <img
             src={processedImageUrl}
-            alt="Prabhash - Full Stack Developer"
+            alt="Prabhash - AI ML Engineer"
             className="w-full h-full object-cover"
             style={{ objectPosition: '25% top' }}
           />
