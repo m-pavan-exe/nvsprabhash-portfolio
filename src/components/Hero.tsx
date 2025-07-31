@@ -1,5 +1,6 @@
 import { Button } from '@/components/ui/button';
 import { ArrowDown, ChevronDown } from 'lucide-react';
+import ProfileImage from './ProfileImage';
 
 const Hero = () => {
   const scrollToSection = (href: string) => {
@@ -23,41 +24,48 @@ const Hero = () => {
       </div>
 
       <div className="container mx-auto px-4 py-20 relative z-10">
-        <div className="max-w-4xl mx-auto">
-          {/* Hero Content */}
-          <div className="text-left space-y-6 animate-fade-in">
-            {/* Greeting */}
-            <p className="text-lg md:text-xl text-primary font-mono">
-              Hello there, I'm
-            </p>
+        <div className="max-w-7xl mx-auto">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            {/* Profile Image - Center Left */}
+            <div className="flex justify-center lg:justify-start">
+              <ProfileImage />
+            </div>
             
-            {/* Name */}
-            <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-foreground leading-tight">
-              Prabhash.
-            </h1>
-            
-            {/* Tagline */}
-            <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold text-secondary leading-tight">
-              I build things for the web.
-            </h2>
-            
-            {/* Bio */}
-            <p className="text-lg text-secondary max-w-2xl leading-relaxed mt-8">
-              I'm a passionate full-stack developer specializing in building exceptional digital experiences. 
-              Currently focused on creating innovative web applications with modern technologies and clean, 
-              user-centered design.
-            </p>
-            
-            {/* CTA Button */}
-            <div className="mt-12">
-              <Button 
-                onClick={() => scrollToSection('#projects')}
-                variant="outline"
-                size="lg"
-                className="border-primary text-primary hover:bg-primary hover:text-background transition-all duration-300 px-8 py-6 text-lg font-mono"
-              >
-                View My Work
-              </Button>
+            {/* Hero Content */}
+            <div className="text-left lg:text-left space-y-6 animate-fade-in">
+              {/* Greeting */}
+              <p className="text-lg md:text-xl text-primary font-mono">
+                Hello there, I'm
+              </p>
+              
+              {/* Name */}
+              <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-foreground leading-tight">
+                Prabhash.
+              </h1>
+              
+              {/* Tagline */}
+              <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold text-secondary leading-tight">
+                I build things for the web.
+              </h2>
+              
+              {/* Bio */}
+              <p className="text-lg text-secondary max-w-2xl leading-relaxed mt-8">
+                I'm a passionate full-stack developer specializing in building exceptional digital experiences. 
+                Currently focused on creating innovative web applications with modern technologies and clean, 
+                user-centered design.
+              </p>
+              
+              {/* CTA Button */}
+              <div className="mt-12">
+                <Button 
+                  onClick={() => scrollToSection('#projects')}
+                  variant="outline"
+                  size="lg"
+                  className="border-primary text-primary hover:bg-primary hover:text-background transition-all duration-300 px-8 py-6 text-lg font-mono"
+                >
+                  View My Work
+                </Button>
+              </div>
             </div>
           </div>
         </div>
