@@ -43,18 +43,15 @@ const ProfileImage = () => {
 
   return (
     <div className="relative">
-      <div className="w-80 h-80 rounded-full overflow-hidden border-4 border-primary/20 shadow-xl">
+      <div className="w-80 h-96 overflow-hidden shadow-xl">
         {processedImageUrl && (
           <img
             src={processedImageUrl}
             alt="Prabhash - Full Stack Developer"
-            className="w-full h-full object-cover object-center"
+            className="w-full h-full object-cover object-top"
           />
         )}
       </div>
-      {/* Decorative elements */}
-      <div className="absolute -inset-4 rounded-full border border-primary/10 animate-pulse"></div>
-      <div className="absolute -inset-8 rounded-full border border-primary/5"></div>
     </div>
   );
 };
