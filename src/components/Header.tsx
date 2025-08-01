@@ -39,8 +39,8 @@ const Header = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Avatar className="h-10 w-10">
-            <AvatarImage src="/lovable-uploads/995eb134-0d51-428c-99c0-69d21410f495.png" alt="Prabhash" />
-            <AvatarFallback className="text-primary font-mono font-bold">P</AvatarFallback>
+            <AvatarImage src="/src/assets/ai-ml-logo.png" alt="AI/ML Logo" />
+            <AvatarFallback className="text-primary font-mono font-bold">AI</AvatarFallback>
           </Avatar>
 
           {/* Desktop Navigation */}
