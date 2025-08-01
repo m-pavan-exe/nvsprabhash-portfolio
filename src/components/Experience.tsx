@@ -5,7 +5,7 @@ import { Building, Calendar } from 'lucide-react';
 const Experience = () => {
   const experiences = [
     {
-      title: "Machine Learning Toolbox Matlab",
+      title: "Machine Learning Intern",
       company: "Qualivon Technologies",
       period: "May 2024",
       type: "Internship",
