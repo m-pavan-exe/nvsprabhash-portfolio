@@ -40,14 +40,14 @@ const Hero = () => {
               
               {/* Tagline */}
               <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold text-secondary leading-tight">
-                I build things for the web.
+                I build intelligent systems.
               </h2>
               
               {/* Bio */}
               <p className="text-lg text-secondary max-w-2xl leading-relaxed mt-8">
-                I'm a passionate full-stack developer specializing in building exceptional digital experiences. 
-                Currently focused on creating innovative web applications with modern technologies and clean, 
-                user-centered design.
+                I'm a passionate AI/ML engineer specializing in creating smart, data-driven solutions.
+                Currently focused on developing innovative applications that combine machine learning, automation,
+                and clean, user-centered design to solve real-world problems.
               </p>
               
               {/* CTA Button */}
