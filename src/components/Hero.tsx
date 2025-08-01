@@ -25,7 +25,7 @@ const Hero = () => {
 
       <div className="container mx-auto px-6 py-20 relative z-10">
         <div className="max-w-7xl mx-auto">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="grid lg:grid-cols-[2fr_1fr] gap-12 items-center">
             {/* Hero Content */}
             <div className="text-center lg:text-left space-y-6 animate-fade-in lg:pl-16">
               {/* Greeting */}
