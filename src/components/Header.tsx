@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
 import { Menu, X, Github, Linkedin, Mail } from 'lucide-react';
-import profilePhoto from '@/assets/profile-photo.jpg';
+
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -39,7 +39,7 @@ const Header = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Avatar className="h-10 w-10">
-            <AvatarImage src={profilePhoto} alt="Prabhash" />
+            <AvatarImage src="/lovable-uploads/995eb134-0d51-428c-99c0-69d21410f495.png" alt="Prabhash" />
             <AvatarFallback className="text-primary font-mono font-bold">P</AvatarFallback>
           </Avatar>
 
