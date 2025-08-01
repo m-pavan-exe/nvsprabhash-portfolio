@@ -64,7 +64,7 @@ const Header = () => {
               className="border-primary text-primary hover:bg-primary hover:text-background transition-all duration-300 font-mono"
               asChild
             >
-              <a href="https://drive.google.com/file/d/1FurafeK7SvMi3h2T3c8MiZDcuVeDC-tu/view?usp=drive_link" target="_blank" rel="noopener noreferrer">
+              <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">
                 Resume
               </a>
             </Button>
