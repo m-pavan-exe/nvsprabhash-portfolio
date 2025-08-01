@@ -20,7 +20,7 @@ const Projects = () => {
         "AI-driven surveillance system",
         "Alert generation for administrators"
       ],
-      githubUrl: "https://github.com/NVS-PRABHASH",
+      githubUrl: "https://github.com/NVS-PRABHASH/Crook-detection-system",
       liveUrl: "#"
     },
     {
@@ -35,7 +35,7 @@ const Projects = () => {
         "Advanced signal processing techniques",
         "Robust performance in diverse environments"
       ],
-      githubUrl: "https://github.com/NVS-PRABHASH",
+      githubUrl: "https://github.com/NVS-PRABHASH/Wi-Fi-powered-human-tracking-through-walls",
       liveUrl: "#"
     },
     {
@@ -50,7 +50,7 @@ const Projects = () => {
         "RCNN model simulation",
         "Enhanced tracking accuracy"
       ],
-      githubUrl: "https://github.com/NVS-PRABHASH",
+      githubUrl: "https://github.com/NVS-PRABHASH/Wi-Fi-powered-human-tracking-through-walls",
       liveUrl: "#"
     }
   ];
