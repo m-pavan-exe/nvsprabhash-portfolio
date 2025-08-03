@@ -65,7 +65,7 @@ const Header = () => {
               className="border-primary text-primary hover:bg-primary hover:text-background transition-all duration-300 font-mono"
               asChild
             >
-              <a href="nvs-prabhash-portfolio/resume.pdf" target="_blank" rel="noopener noreferrer">
+              <a href="nvsprabhash-portfolio/resume.pdf" target="_blank" rel="noopener noreferrer">
                 Resume
               </a>
             </Button>
