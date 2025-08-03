@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
 import { Menu, X, Github, Linkedin, Mail } from 'lucide-react';
+import aiLogo from '@/assets/ai-ml-logo.png';
 
 
 const Header = () => {
@@ -39,7 +40,7 @@ const Header = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Avatar className="h-10 w-10">
-            <AvatarImage src="/src/assets/ai-ml-logo.png" alt="AI/ML Logo" />
+            <AvatarImage src={aiLogo} alt="AI/ML Logo" />
             <AvatarFallback className="text-primary font-mono font-bold">AI</AvatarFallback>
           </Avatar>
 
