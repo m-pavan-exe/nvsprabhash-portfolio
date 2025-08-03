@@ -63,7 +63,7 @@ const Contact = () => {
               </div>
             </div>
 
-            <div className="flex gap-4 pt-6">
+            <div className="flex gap-4 pt-6 justify-center">
               <Button variant="outline" size="icon" asChild className="hover:shadow-glow transition-all duration-300">
                 <a href="https://github.com/NVS-PRABHASH" target="_blank" rel="noopener noreferrer">
                   <Github className="h-5 w-5" />
