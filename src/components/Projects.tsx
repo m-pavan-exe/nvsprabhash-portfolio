@@ -141,16 +141,6 @@ const Projects = () => {
                           View Code
                         </a>
                       </Button>
-                      <Button 
-                        variant="outline"
-                        className="border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-all duration-300"
-                        asChild
-                      >
-                        <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
-                          <ExternalLink className="mr-2 h-4 w-4" />
-                          Live Demo
-                        </a>
-                      </Button>
                     </div>
                   </CardContent>
                 </div>

@@ -17,9 +17,8 @@ const Contact = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
-          {/* Contact Info */}
-          <div className="space-y-8 animate-fade-in">
+        <div className="max-w-4xl mx-auto">
+          <div className="space-y-8 animate-fade-in text-center">
             <div>
               <h3 className="text-2xl font-bold mb-6 text-primary">Let's Connect</h3>
               <p className="text-lg text-muted-foreground mb-8">
@@ -78,30 +77,6 @@ const Contact = () => {
             </div>
           </div>
 
-          {/* Contact Form */}
-          <Card className="bg-card/50 backdrop-blur-sm border-primary/20 animate-scale-in">
-            <CardHeader>
-              <CardTitle>Send a Message</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <form className="space-y-6">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <Input placeholder="Your Name" className="bg-surface-variant border-primary/20" />
-                  <Input type="email" placeholder="Your Email" className="bg-surface-variant border-primary/20" />
-                </div>
-                <Input placeholder="Subject" className="bg-surface-variant border-primary/20" />
-                <Textarea 
-                  placeholder="Your Message" 
-                  rows={6} 
-                  className="bg-surface-variant border-primary/20 resize-none"
-                />
-                <Button className="w-full bg-gradient-primary hover:shadow-glow transition-all duration-300">
-                  <Send className="mr-2 h-4 w-4" />
-                  Send Message
-                </Button>
-              </form>
-            </CardContent>
-          </Card>
         </div>
       </div>
     </section>
