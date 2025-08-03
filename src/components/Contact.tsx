@@ -27,37 +27,37 @@ const Contact = () => {
               </p>
             </div>
 
-            <div className="space-y-6">
-              <div className="flex items-center gap-4">
+            <div className="space-y-6 max-w-md mx-auto">
+              <div className="flex items-center justify-start gap-4 p-4 rounded-lg border bg-card/50 hover:bg-card transition-colors">
                 <div className="p-3 bg-primary/10 rounded-lg">
                   <Mail className="h-6 w-6 text-primary" />
                 </div>
-                <div>
-                  <h4 className="font-semibold">Email</h4>
+                <div className="text-left">
+                  <h4 className="font-semibold text-foreground">Email</h4>
                   <a href="mailto:prabhasnvs@gmail.com" className="text-muted-foreground hover:text-primary transition-colors">
                     prabhasnvs@gmail.com
                   </a>
                 </div>
               </div>
 
-              <div className="flex items-center gap-4">
+              <div className="flex items-center justify-start gap-4 p-4 rounded-lg border bg-card/50 hover:bg-card transition-colors">
                 <div className="p-3 bg-primary/10 rounded-lg">
                   <Phone className="h-6 w-6 text-primary" />
                 </div>
-                <div>
-                  <h4 className="font-semibold">Phone</h4>
+                <div className="text-left">
+                  <h4 className="font-semibold text-foreground">Phone</h4>
                   <a href="tel:+91801873XXXX" className="text-muted-foreground hover:text-primary transition-colors">
                     +91-801873XXXX
                   </a>
                 </div>
               </div>
 
-              <div className="flex items-center gap-4">
+              <div className="flex items-center justify-start gap-4 p-4 rounded-lg border bg-card/50 hover:bg-card transition-colors">
                 <div className="p-3 bg-primary/10 rounded-lg">
                   <MapPin className="h-6 w-6 text-primary" />
                 </div>
-                <div>
-                  <h4 className="font-semibold">Location</h4>
+                <div className="text-left">
+                  <h4 className="font-semibold text-foreground">Location</h4>
                   <span className="text-muted-foreground">Tekkali, Srikakulam, AP</span>
                 </div>
               </div>
