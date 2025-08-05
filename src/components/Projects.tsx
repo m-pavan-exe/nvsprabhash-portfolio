@@ -2,11 +2,14 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { ExternalLink, Github, Calendar, Users } from 'lucide-react';
+import { useIsMobile } from '@/hooks/use-mobile';
 import crookDetectionImg from '@/assets/project-crook-detection.jpg';
 import wifiTrackingImg from '@/assets/project-wifi-tracking.jpg';
 import mlToolboxImg from '@/assets/project-ml-toolbox.jpg';
 
 const Projects = () => {
+  const isMobile = useIsMobile();
+  
   const projects = [
     {
       title: "Crook Detection System",
@@ -56,18 +59,18 @@ const Projects = () => {
   ];
 
   return (
-    <section id="projects" className="py-20 bg-gradient-surface">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-16 animate-fade-in">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-primary bg-clip-text text-transparent">
+    <section id="projects" className="py-12 sm:py-20 bg-gradient-surface">
+      <div className="container mx-auto px-4 sm:px-6">
+        <div className="text-center mb-12 sm:mb-16 animate-fade-in">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 bg-gradient-primary bg-clip-text text-transparent">
             Featured Projects
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto px-2 sm:px-0">
             Innovative solutions combining AI, machine learning, and cutting-edge technology
           </p>
         </div>
 
-        <div className="space-y-12">
+        <div className="space-y-8 sm:space-y-12">
           {projects.map((project, index) => (
             <Card 
               key={project.title}
@@ -80,49 +83,50 @@ const Projects = () => {
                   <img 
                     src={project.image} 
                     alt={project.title}
-                    className="w-full h-80 lg:h-full object-cover hover:scale-105 transition-transform duration-500"
+                    className="w-full h-64 sm:h-80 lg:h-full object-cover hover:scale-105 transition-transform duration-500"
+                    loading={index > 0 ? "lazy" : "eager"}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent lg:bg-gradient-to-r"></div>
                 </div>
 
                 {/* Project Content */}
-                <div className={`p-8 flex flex-col justify-center ${index % 2 === 1 ? 'lg:col-start-1' : ''}`}>
-                  <CardHeader className="p-0 mb-6">
+                <div className={`p-4 sm:p-8 flex flex-col justify-center ${index % 2 === 1 ? 'lg:col-start-1' : ''}`}>
+                  <CardHeader className="p-0 mb-4 sm:mb-6">
                     <div className="flex items-center gap-2 text-sm text-muted-foreground mb-2">
                       <Calendar className="h-4 w-4" />
                       {project.period}
                     </div>
-                    <CardTitle className="text-2xl md:text-3xl mb-3 text-primary">
+                    <CardTitle className="text-xl sm:text-2xl md:text-3xl mb-3 text-primary">
                       {project.title}
                     </CardTitle>
-                    <CardDescription className="text-base leading-relaxed">
-                      {project.description}
+                    <CardDescription className="text-sm sm:text-base leading-relaxed">
+                      {isMobile ? project.description.substring(0, 200) + "..." : project.description}
                     </CardDescription>
                   </CardHeader>
 
                   <CardContent className="p-0">
                     {/* Key Highlights */}
-                    <div className="mb-6">
-                      <h4 className="font-semibold mb-3 text-primary">Key Highlights:</h4>
-                      <ul className="space-y-2">
-                        {project.highlights.map((highlight, idx) => (
+                    <div className="mb-4 sm:mb-6">
+                      <h4 className="font-semibold mb-2 sm:mb-3 text-primary text-sm sm:text-base">Key Highlights:</h4>
+                      <ul className="space-y-1 sm:space-y-2">
+                        {project.highlights.slice(0, isMobile ? 2 : 4).map((highlight, idx) => (
                           <li key={idx} className="flex items-start gap-2">
                             <div className="w-1.5 h-1.5 bg-primary rounded-full mt-2 flex-shrink-0"></div>
-                            <span className="text-sm text-muted-foreground">{highlight}</span>
+                            <span className="text-xs sm:text-sm text-muted-foreground">{highlight}</span>
                           </li>
                         ))}
                       </ul>
                     </div>
 
                     {/* Technologies */}
-                    <div className="mb-6">
-                      <h4 className="font-semibold mb-3 text-primary">Technologies Used:</h4>
-                      <div className="flex flex-wrap gap-2">
+                    <div className="mb-4 sm:mb-6">
+                      <h4 className="font-semibold mb-2 sm:mb-3 text-primary text-sm sm:text-base">Technologies Used:</h4>
+                      <div className="flex flex-wrap gap-1 sm:gap-2">
                         {project.technologies.map((tech) => (
                           <Badge 
                             key={tech} 
                             variant="secondary"
-                            className="bg-primary/10 text-primary border-primary/20 hover:bg-primary/20 transition-colors"
+                            className="bg-primary/10 text-primary border-primary/20 hover:bg-primary/20 transition-colors text-xs sm:text-sm"
                           >
                             {tech}
                           </Badge>
@@ -131,9 +135,10 @@ const Projects = () => {
                     </div>
 
                     {/* Action Buttons */}
-                    <div className="flex flex-wrap gap-4">
+                    <div className="flex flex-wrap gap-3 sm:gap-4">
                       <Button 
-                        className="bg-gradient-primary hover:shadow-glow transition-all duration-300"
+                        className="bg-gradient-primary hover:shadow-glow transition-all duration-300 min-h-[44px] flex-1 sm:flex-none touch-manipulation"
+                        size={isMobile ? "default" : "default"}
                         asChild
                       >
                         <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
@@ -150,17 +155,17 @@ const Projects = () => {
         </div>
 
         {/* Call to action */}
-        <div className="text-center mt-16 animate-fade-in">
-          <p className="text-lg text-muted-foreground mb-6">
+        <div className="text-center mt-12 sm:mt-16 animate-fade-in">
+          <p className="text-base sm:text-lg text-muted-foreground mb-4 sm:mb-6 px-2 sm:px-0">
             Want to see more of my work?
           </p>
           <Button 
-            size="lg"
-            className="bg-gradient-primary hover:shadow-glow transition-all duration-300"
+            size={isMobile ? "default" : "lg"}
+            className="bg-gradient-primary hover:shadow-glow transition-all duration-300 min-h-[44px] touch-manipulation"
             asChild
           >
             <a href="https://github.com/NVS-PRABHASH" target="_blank" rel="noopener noreferrer">
-              <Github className="mr-2 h-5 w-5" />
+              <Github className="mr-2 h-4 sm:h-5 w-4 sm:w-5" />
               Visit My GitHub
             </a>
           </Button>

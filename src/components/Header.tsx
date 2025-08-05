@@ -2,12 +2,14 @@ import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
 import { Menu, X, Github, Linkedin, Mail } from 'lucide-react';
+import { useIsMobile } from '@/hooks/use-mobile';
 import aiLogo from '@/assets/ai-ml-logo.png';
 
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const isMobile = useIsMobile();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -16,6 +18,19 @@ const Header = () => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  // Prevent body scroll when mobile menu is open
+  useEffect(() => {
+    if (isMobile && isMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+    
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, [isMobile, isMenuOpen]);
 
   const navItems = [
     { label: '01. About', href: '#about' },
@@ -75,8 +90,9 @@ const Header = () => {
           <Button
             variant="ghost"
             size="icon"
-            className="md:hidden"
+            className="md:hidden touch-none select-none min-h-[44px] min-w-[44px]"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
+            aria-label={isMenuOpen ? "Close menu" : "Open menu"}
           >
             {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
           </Button>
@@ -84,30 +100,44 @@ const Header = () => {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="md:hidden absolute top-full left-0 right-0 bg-background border-t border-border animate-fade-in">
+          <div className="md:hidden fixed top-16 left-0 right-0 bg-background/95 backdrop-blur-lg border-t border-border animate-fade-in z-40 max-h-[calc(100vh-4rem)] overflow-y-auto">
             <nav className="flex flex-col py-4">
               {navItems.map((item) => (
                 <button
                   key={item.label}
                   onClick={() => scrollToSection(item.href)}
-                  className="text-left px-4 py-3 text-secondary hover:text-primary hover:bg-muted transition-all duration-200 font-mono"
+                  className="text-left px-6 py-4 text-secondary hover:text-primary hover:bg-muted transition-all duration-200 font-mono min-h-[44px] active:bg-muted/80"
                 >
                   {item.label}
                 </button>
               ))}
-              <div className="flex items-center justify-center space-x-4 mt-4 pt-4 border-t border-border">
-                <Button variant="ghost" size="icon" asChild>
-                  <a href="https://github.com/NVS-PRABHASH" target="_blank" rel="noopener noreferrer">
+              
+              {/* Resume button for mobile */}
+              <div className="px-6 py-4">
+                <Button 
+                  variant="outline" 
+                  className="w-full border-primary text-primary hover:bg-primary hover:text-background transition-all duration-300 font-mono min-h-[44px]"
+                  asChild
+                >
+                  <a href="https://github.com/m-pavan-exe/nvsprabhash-portfolio/blob/main/resume.pdf" target="_blank" rel="noopener noreferrer">
+                    Resume
+                  </a>
+                </Button>
+              </div>
+              
+              <div className="flex items-center justify-center space-x-6 mt-4 pt-4 border-t border-border">
+                <Button variant="ghost" size="icon" className="min-h-[44px] min-w-[44px]" asChild>
+                  <a href="https://github.com/NVS-PRABHASH" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
                     <Github className="h-5 w-5" />
                   </a>
                 </Button>
-                <Button variant="ghost" size="icon" asChild>
-                  <a href="https://www.linkedin.com/in/nvs-prabhash" target="_blank" rel="noopener noreferrer">
+                <Button variant="ghost" size="icon" className="min-h-[44px] min-w-[44px]" asChild>
+                  <a href="https://www.linkedin.com/in/nvs-prabhash" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
                     <Linkedin className="h-5 w-5" />
                   </a>
                 </Button>
-                <Button variant="ghost" size="icon" asChild>
-                  <a href="mailto:prabhasnvs@gmail.com">
+                <Button variant="ghost" size="icon" className="min-h-[44px] min-w-[44px]" asChild>
+                  <a href="mailto:prabhasnvs@gmail.com" aria-label="Email">
                     <Mail className="h-5 w-5" />
                   </a>
                 </Button>

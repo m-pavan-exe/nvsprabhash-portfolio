@@ -1,8 +1,11 @@
 import { Button } from '@/components/ui/button';
 import { ArrowDown, ChevronDown } from 'lucide-react';
+import { useIsMobile } from '@/hooks/use-mobile';
 import ProfileImage from './ProfileImage';
 
 const Hero = () => {
+  const isMobile = useIsMobile();
+  
   const scrollToSection = (href: string) => {
     const element = document.querySelector(href);
     if (element) {
@@ -23,40 +26,40 @@ const Hero = () => {
         </h1>
       </div>
 
-      <div className="container mx-auto px-6 py-20 relative z-10">
+      <div className="container mx-auto px-4 sm:px-6 py-12 sm:py-20 relative z-10">
         <div className="max-w-7xl mx-auto">
-          <div className="grid lg:grid-cols-[2fr_1fr] gap-12 items-center">
+          <div className="grid lg:grid-cols-[2fr_1fr] gap-8 lg:gap-12 items-center">
             {/* Hero Content */}
-            <div className="text-center lg:text-left space-y-6 animate-fade-in lg:pl-16">
+            <div className="text-center lg:text-left space-y-4 sm:space-y-6 animate-fade-in lg:pl-16 order-2 lg:order-1">
               {/* Greeting */}
-              <p className="text-lg md:text-xl text-primary font-mono">
+              <p className="text-base sm:text-lg md:text-xl text-primary font-mono">
                 Hello there, I'm
               </p>
               
               {/* Name */}
-              <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-foreground leading-tight">
+              <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-bold text-foreground leading-tight">
                 Prabhash.
               </h1>
               
               {/* Tagline */}
-              <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold text-secondary leading-tight">
+              <h2 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-bold text-secondary leading-tight">
                 I build intelligent systems.
               </h2>
               
               {/* Bio */}
-              <p className="text-lg text-secondary max-w-2xl leading-relaxed mt-8">
+              <p className="text-base sm:text-lg text-secondary max-w-2xl leading-relaxed mt-6 sm:mt-8 px-2 sm:px-0">
                 I'm a passionate AI/ML engineer specializing in creating smart, data-driven solutions.
                 Currently focused on developing innovative applications that combine machine learning, automation,
                 and clean, user-centered design to solve real-world problems.
               </p>
               
               {/* CTA Button */}
-              <div className="mt-12">
+              <div className="mt-8 sm:mt-12">
                 <Button 
                   onClick={() => scrollToSection('#projects')}
                   variant="outline"
-                  size="lg"
-                  className="border-primary text-primary hover:bg-primary hover:text-background transition-all duration-300 px-8 py-6 text-lg font-mono"
+                  size={isMobile ? "default" : "lg"}
+                  className="border-primary text-primary hover:bg-primary hover:text-background transition-all duration-300 px-6 sm:px-8 py-3 sm:py-6 text-base sm:text-lg font-mono min-h-[44px] touch-manipulation"
                 >
                   View My Work
                 </Button>
@@ -64,17 +67,18 @@ const Hero = () => {
             </div>
             
             {/* Profile Image - Center Right */}
-            <div className="flex justify-center lg:justify-end">
+            <div className="flex justify-center lg:justify-end order-1 lg:order-2 mb-4 lg:mb-0">
               <ProfileImage />
             </div>
           </div>
         </div>
 
         {/* Scroll indicator */}
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+        <div className="absolute bottom-6 sm:bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
           <button 
             onClick={() => scrollToSection('#about')}
-            className="flex flex-col items-center text-secondary hover:text-primary transition-colors duration-300"
+            className="flex flex-col items-center text-secondary hover:text-primary transition-colors duration-300 min-h-[44px] min-w-[44px] touch-manipulation"
+            aria-label="Scroll to About section"
           >
             <ChevronDown className="h-6 w-6" />
           </button>

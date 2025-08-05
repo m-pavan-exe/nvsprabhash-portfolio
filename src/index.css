@@ -127,4 +127,43 @@ All colors MUST be HSL.
   body {
     @apply bg-background text-foreground;
   }
+  
+  /* Mobile optimizations */
+  @media (max-width: 768px) {
+    html {
+      scroll-behavior: smooth;
+      -webkit-overflow-scrolling: touch;
+    }
+    
+    body {
+      -webkit-text-size-adjust: 100%;
+      -webkit-tap-highlight-color: transparent;
+    }
+    
+    /* Improve touch targets */
+    button, 
+    [role="button"], 
+    a {
+      touch-action: manipulation;
+    }
+    
+    /* Reduce motion for better performance on mobile */
+    @media (prefers-reduced-motion: no-preference) {
+      .animate-fade-in {
+        animation-duration: 0.2s;
+      }
+      
+      .animate-bounce {
+        animation-duration: 1.5s;
+      }
+    }
+  }
+  
+  /* Ensure minimum touch target sizes */
+  .touch-manipulation {
+    touch-action: manipulation;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    user-select: none;
+  }
 }
